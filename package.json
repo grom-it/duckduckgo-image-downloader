@@ -1,0 +1,15 @@
+{
+  "name": "duckduckgo-image-downloader",
+  "version": "0.1.0",
+  "description": "Mass downloader for images from Duckduckgo image search",
+  "author": "GROMiT",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.20.0",
+    "duckduckgo-images-api": "^1.0.3",
+    "tempy": "^0.3.0"
+  },
+  "bin": {
+    "duckduckgo-image-downloader": "./index.js"
+  }
+}
