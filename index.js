@@ -22,12 +22,12 @@ function writeUrlsToFile(results) {
 }
 
 function download(urlFile, outputPath) {  
-  const wgetCommand = '/usr/bin/wget -nd -nv -i ' + urlFile + ' -P ' + outputPath;
-  console.log("Invoking wget with: %s", wgetCommand);
+  const wgetCommand = '$(which aria2c) -j 10 -i ' + urlFile + ' -d ' + outputPath;
+  console.log("Invoking aria2 with: %s", wgetCommand);
   try {
     execSync(wgetCommand, { stdio: 'inherit' });
   } catch (ignore) {
-    console.error("wget finished with error - some files failed to download");
+    console.error("download finished with error - some files failed to download");
   }
 }
 
