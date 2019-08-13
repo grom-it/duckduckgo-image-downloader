@@ -6,8 +6,8 @@ Mass downloader tool for results from the Duckduckgo image search.
 Prerequisites
 ---
 
-- node.js
-- aria2 (high speed file downloader)
+- [Node.js](https://nodejs.org/)
+- [aria2](https://aria2.github.io/) (high speed file downloader)
 
 Installation
 ---
