@@ -36,10 +36,10 @@ commander
   .option('-i, --iterations <number>', 'Number of batches to fetch (each ~50 images)', 1)
   .option('-r, --retries <number>', 'Number of retries', 2)
   .action(function (keywords) {
-    console.log('Fetching ~%d images with %d retries for keywords: %s',
+    console.log('Fetching ~%d images with %d retries for keywords: "%s"',
       commander.iterations * 50, commander.retries, keywords.join(' '));
     image_search({
-      query: keywords.join(' '),
+      query: `"${keywords.join(' ')}"`,
       moderate: false,
       iterations: commander.iterations,
       retries: commander.retries
